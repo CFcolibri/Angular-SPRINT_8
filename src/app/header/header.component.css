@@ -1,0 +1,13 @@
+#buttonHome{
+  color: white;
+  border-radius: 0%;
+  border-left-color:grey;
+
+}
+
+#buttonShip{
+  color: white;
+  border-radius: 0%;
+  border-left-color: grey;
+  border-right-color: grey ;
+}
