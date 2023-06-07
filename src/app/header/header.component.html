@@ -26,4 +26,8 @@
 <div style="background-color: grey; height: 1px;"></div>
 
 <!-- child component ships -->
-<app-child-ship  [starships]="filteredStarships" style="color: white;"></app-child-ship>
+<app-child-ship
+  [starships]="filteredStarships"
+  (filteredStarshipsEvent)="receiveFilteredStarships($event)"
+  style="color: white;">
+</app-child-ship>

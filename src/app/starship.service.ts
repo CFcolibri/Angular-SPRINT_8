@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class StarshipService {
   private apiUrl = 'https://swapi.dev/api/starships';
-  ngOnChanges: any;
 
   constructor(
     private http: HttpClient
