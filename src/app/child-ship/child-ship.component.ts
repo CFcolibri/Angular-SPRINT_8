@@ -17,7 +17,7 @@ export class ChildShipComponent implements OnChanges {
   ngOnChanges() {
     // Filter the starships to include only the name, model, and length properties
     this.filteredStarships = this.starships.map(starship => {
-      return { name: starship.name, model: starship.model, length: starship.length };
+      return { name: starship.name, model: starship.model};
     });
 
     // Emit the filtered starships to the parent component
