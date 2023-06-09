@@ -15,32 +15,20 @@
   </div>
 </nav>
 
-<div class="row ">
-  <nav class="navbar navbar-dark" style="background-color: #000000;">
-      <div class="main-nav container-fluid">
-          <div class="col-1 col-sm-2 col-md-4"></div>
-          <div class="col-5 col-sm-4 col-md-2 text-center nav-buttons p-2">
-              <a class="navbar-brand text-white-50"
-                routerLinkActive="active"
-                routerLink="/"
-                [routerLinkActiveOptions]={exact:true}
-                (click)="setHomeActive()"
-                >HOME
-                <span class="horizontal-bar"
-                [ngClass]="router.url ==='/' || router.url ==='/login' ? 'active-bar' : 'hidden-bar'"
-                ></span>
-              </a>
-          </div>
-          <div class="col-5 col-sm-4 col-md-2 text-center nav-buttons p-2">
-              <a class="navbar-brand text-white-50"
-                (click)="setStarShipActive()"
-                routerLinkActive="active"
-                routerLink="/starships/"
-                >STARSHIPS
-                <span class="horizontal-bar"
-                [ngClass]="router.url ==='/starships' ? 'active-bar' : 'hidden-bar'"
-                ></span>
-              </a>
-          </div>
+<div style="background-color: grey; height: 1px; margin-top: 10px;"></div>
+
+<div class="container d-flex justify-content-between align-items-center">
+  <div class="d-flex justify-content-center" style="margin-left: 39%;">
+    <button id="buttonHome" class="btn">HOME</button>
+    <button id="buttonShip" class="btn ml-2" (click)="onClickStarshipButton()">STARTSHIP</button>
+  </div>
+</div>
 
 <div style="background-color: grey; height: 1px;"></div>
+
+<!-- child component ships -->
+<app-starships
+  [starships]="filteredStarships"
+  (filteredStarshipsEvent)="receiveFilteredStarships($event)"
+  style="color: white;">
+</app-starships>

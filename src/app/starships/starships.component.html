@@ -1,51 +1,11 @@
-<ngx-spinner
-bdColor="rgba(0, 0, 0, 0.8)"
-size="medium"
-color = "#fff"
-type = "ball-beat"
-[fullScreen]="true"> <p style="color: white">Loading Starships...</p>
-</ngx-spinner>
 
- <div class="mx-5" *ngFor="let starship of starships; let i = index">
-    <a (click)="navigateToStarship(i)"
-    *ngIf="i + 1 ===starships.length"
-    class="link-secondary text-decoration-none"
-    #theLastList>
-      <div class="card w-100 mt-3 bg-secondary" style="width: 18rem;">
-
-          <div class="d-flex">
-            <div class="card-body w-50">
-              <h5 class="card-title text-white">{{starship.name}}</h5>
-              <p class="card-text text-white-50">{{starship.model}}</p>
-              <p class="text-white-50">{{i}}</p>
-              <div class="decal"></div>
-
-            </div>
-
-
-
-          </div>
-        </div>
-      </a>
-      <a (click)="navigateToStarship(i)"
-      *ngIf="i + 1 !=starships.length"
-      class="link-secondary text-decoration-none">
-        <div class="card w-100 mt-3 bg-secondary">
-
-            <div class="d-flex">
-              <div class="card-body w-50">
-                <h5 class="card-title text-white">{{starship.name}}</h5>
-                <p class="card-text text-white-50">{{starship.model}}</p>
-                <p class="text-white-50">{{i}}</p>
-                <div class="decal"></div>
-
-              </div>
-              <div>
-              class="w-50 image-box"
-
-              </div>
-
-            </div>
-          </div>
-        </a>
+<div class="row">
+  <div class="col-12" style="margin-top: 30px;" *ngFor="let starship of starships">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">{{ starship.name }}</h5>
+        <h6 class="card-subtitle mb-2">{{ starship.model }}</h6>
+      </div>
+    </div>
   </div>
+</div>

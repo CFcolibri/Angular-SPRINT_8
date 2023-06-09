@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { StarshipsComponent } from './starships/starships.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
+import { WebService } from './services/web.service';
+
 
 @NgModule({
   declarations: [
@@ -15,14 +16,15 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HeaderComponent,
     WelcomePageComponent,
     StarshipsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxSpinnerModule
+
   ],
-  providers: [],
+  providers: [WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

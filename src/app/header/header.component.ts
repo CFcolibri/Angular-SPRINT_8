@@ -1,40 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UsersService } from '../services/users.service';
 
+
+import { Component } from '@angular/core';
+import { WebService } from '../services/web.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-  currentURL = window.location.href;
-  starShipActive: boolean = false;
-  homeActive: boolean = false;
+export class HeaderComponent {
+  filteredStarships: any[] = [];
 
-  constructor(public router: Router,
-    public usersService: UsersService) {}
+  constructor(private WebService: WebService) {}
 
-  setStarShipActive() {
-    this.starShipActive = true;
-    this.homeActive = false;
+  onClickStarshipButton(): void {
+    this.WebService.getStarships().subscribe(data => {
+      this.filteredStarships = data.results;
+    });
   }
 
-  setHomeActive() {
-    this.starShipActive = false;
-    this.homeActive = true;
-  }
-
-
-
-  ngOnInit(): void {
-    if (this.router.url === '/') {
-      this.homeActive = true;
-    }
-    if (this.currentURL.includes('starships')) {
-      this.starShipActive = true;
-      this.homeActive = false;
-    }
+  receiveFilteredStarships(filteredStarships: any[]): void {
+    this.filteredStarships = filteredStarships;
   }
 }
