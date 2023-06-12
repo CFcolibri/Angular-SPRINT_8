@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Starship } from '../interfaces/starship';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +13,7 @@ export class WebService {
   ) { }
 
   getStarships(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<Starship[]>(this.apiUrl);
   }
 }
 

@@ -16,11 +16,11 @@ export class HeaderComponent{
     private WebService: WebService,
     private router : Router) {}
 
-  onClickStarshipButton(): void {
-    this.WebService.getStarships().subscribe(data => {
-      this.filteredStarships = data.results;
-    });
-  }
+  // onClickStarshipButton(): void {
+  //   this.WebService.getStarships().subscribe(data => {
+  //     this.filteredStarships = data.results;
+  //   });
+  // }
 
   // receiveFilteredStarships(filteredStarships: any[]): void {
   //   this.filteredStarships = filteredStarships;
