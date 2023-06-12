@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-starships',
@@ -7,11 +8,13 @@ import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core
 })
 export class StarshipsComponent implements OnChanges {
   @Input() starships: any[] = [];
-  @Output() filteredStarshipsEvent = new EventEmitter<any[]>();
+  // @Output() filteredStarshipsEvent = new EventEmitter<any[]>();
 
   filteredStarships: any[] = [];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnChanges() {
     // Filter the starships to include only the name, model, and length properties
@@ -19,7 +22,5 @@ export class StarshipsComponent implements OnChanges {
       return { name: starship.name, model: starship.model};
     });
 
-    // Emit the filtered starships to the parent component
-    this.filteredStarshipsEvent.emit(this.filteredStarships);
   }
 }

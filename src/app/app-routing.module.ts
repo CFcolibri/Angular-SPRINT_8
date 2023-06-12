@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { StarshipsComponent } from './starships/starships.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  // { path: '', component: WelcomePageComponent }
+  { path: '', component: WelcomeComponent },
+  { path: 'starships', component: StarshipsComponent},
+
+    // otherwise redirect to home
+    { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
