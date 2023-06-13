@@ -10,6 +10,7 @@ import { StarshipsComponent } from './starships/starships.component';
 import { WebService } from './services/web.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RouterModule } from '@angular/router';
+import { ShipInfoComponent } from './ship-info/ship-info.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     HeaderComponent,
     StarshipsComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ShipInfoComponent
   ],
   imports: [
     BrowserModule,

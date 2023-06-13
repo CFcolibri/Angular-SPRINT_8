@@ -1,2 +1,73 @@
-<h1 style="color: aqua;">Hola info</h1>
+<div *ngIf="selectedStarship" class="ship-info" style="color: white;">
+  <h2 class="ship-name">{{ selectedStarship.name }}</h2>
+
+  <div class="ship-details">
+    <div class="ship-image">
+      <img [src]="selectedStarship.image" alt="{{ selectedStarship.name }}" />
+    </div>
+
+    <div class="ship-attributes">
+      <div class="attribute">
+        <div class="attribute-label">Model:</div>
+        <div class="attribute-value">{{ selectedStarship.model }}</div>
+      </div>
+      <div class="attribute">
+        <div class="attribute-label">Starship Class:</div>
+        <div class="attribute-value">{{ selectedStarship.starship_class }}</div>
+      </div>
+      <div class="attribute">
+        <div class="attribute-label">Manufacturer:</div>
+        <div class="attribute-value">{{ selectedStarship.manufacturer }}</div>
+      </div>
+      <div class="attribute">
+        <div class="attribute-label">Cost:</div>
+        <div class="attribute-value">{{ selectedStarship.cost_in_credits }}</div>
+      </div>
+    </div>
+
+    <div class="ship-columns">
+      <div class="left-column">
+        <div class="attribute">
+          <div class="attribute-label">Crew:</div>
+          <div class="attribute-value">{{ selectedStarship.crew }}</div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-label">Passenger Capacity:</div>
+          <div class="attribute-value">{{ selectedStarship.passengers }}</div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-label">Cargo Capacity:</div>
+          <div class="attribute-value">{{ selectedStarship.cargo_capacity }}</div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-label">Consumables:</div>
+          <div class="attribute-value">{{ selectedStarship.consumables }}</div>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="attribute">
+          <div class="attribute-label">Length:</div>
+          <div class="attribute-value">{{ selectedStarship.length }}</div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-label">Max Atmosphering Speed:</div>
+          <div class="attribute-value">{{ selectedStarship.max_atmosphering_speed }}</div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-label">Hyperdrive Rating:</div>
+          <div class="attribute-value">{{ selectedStarship.hyperdrive_rating }}</div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-label">MGLT:</div>
+          <div class="attribute-value">{{ selectedStarship.MGLT }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pilots-section">
+      <h3>Pilots</h3>
+      <!-- Add code to display pilots information here -->
+    </div>
+  </div>
+</div>
 

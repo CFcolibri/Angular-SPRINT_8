@@ -1,0 +1,56 @@
+.ship-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ship-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ship-image {
+  margin-bottom: 20px;
+}
+
+.ship-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.ship-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.attribute {
+  display: flex;
+}
+
+.attribute-label {
+  font-weight: bold;
+  width: 120px;
+}
+
+.ship-columns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pilots-section {
+  margin-top: 40px;
+}
+
+.pilots-section h3 {
+  margin-bottom: 10px;
+}
