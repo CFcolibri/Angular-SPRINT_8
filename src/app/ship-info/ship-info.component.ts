@@ -28,6 +28,7 @@ export class ShipInfoComponent implements OnInit {
   getStarshipById(id: string) {
     this.webService.getStarshipById(id).subscribe((starship: Starship) => {
       this.selectedStarship = starship;
+      this.starshipImage = this.webService.getStarshipImage(parseInt(id) - 1);
     });
   }
 }
