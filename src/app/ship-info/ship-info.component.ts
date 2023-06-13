@@ -11,6 +11,7 @@ import { Starship } from '../interfaces/starship';
 })
 export class ShipInfoComponent implements OnInit {
   selectedStarship!: Starship;
+  starshipImage!: string;
 
   constructor(
     private route: ActivatedRoute,

@@ -7,6 +7,7 @@ import { Starship } from '../interfaces/starship';
 })
 export class WebService {
   private apiUrl = 'https://swapi.dev/api/starships';
+  private imageBaseUrl = 'https://starwars-visualguide.com/assets/img/starships';
 
   constructor(
     private http: HttpClient
@@ -16,12 +17,13 @@ export class WebService {
     return this.http.get<any>(this.apiUrl).pipe(
       map((response: any) => {
         const starships: Starship[] = response.results;
-        return starships.map((starship: Starship, index: number) => {
-          const imageUrl = `https://starwars-visualguide.com/assets/img/starships/${index + 1}.jpg`;
-          return { ...starship, image: imageUrl };
-        });
+        return starships;
       })
     );
+  }
+
+  getStarshipImage(index: number): string {
+    return `${this.imageBaseUrl}/${index + 1}.jpg`;
   }
 
   getStarshipById(id: string): Observable<Starship> {
