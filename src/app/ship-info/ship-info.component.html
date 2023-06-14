@@ -2,7 +2,7 @@
   <h2 class="text-center mt-4">{{ selectedStarship.name }}</h2>
   <div class="ship-image d-flex justify-content-center mt-4">
     <ng-container *ngIf="starshipImage; else noImage">
-      <img [src]="starshipImage" alt="{{ selectedStarship.name }}" class="img-fluid" style="max-height: 400px;" />
+      <img [src]="starshipImage" alt="{{ selectedStarship.name }}" class="img-fluid" style="max-height: 400px; border-bottom: 2px solid blue;" />
     </ng-container>
     <ng-template #noImage>
       <div class="no-image-message">No image available for this starship.</div>
