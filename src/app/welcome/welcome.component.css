@@ -7,14 +7,16 @@ html, body, p {
 .crawl-container {
   position: relative;
   width: 100%;
+  max-width: 1200px;
   height: 50vh;
   /* background-color: black; */
-  color: yellow;
+  color: gold;
   overflow: hidden;
   transform-origin: 50% 95%;
   transform: perspective(300px) rotateX(25deg);
-      -webkit-transform: perspective(300px) rotateX(25deg);
+  -webkit-transform: perspective(300px) rotateX(25deg);
 }
+
 
 .crawl-content {
   position: absolute;
@@ -22,15 +24,17 @@ html, body, p {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: crawl-animation 8s linear forwards;
+  animation: crawl-animation 20s linear forwards;
   transform-origin: top;
 }
 
 .crawl-text {
+  font-family: "News Gothic", Arial, sans-serif;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
-  animation: scroll 100s linear 0s infinite;
+  animation: scroll 50s linear 0s infinite;
+  margin-left: 25%;
 }
 
 @keyframes crawl-animation {
@@ -38,9 +42,26 @@ html, body, p {
     transform: translateY(100%);
   }
   100% {
-    transform: translateY(-200%);
+    transform: translateY(-300%);
   }
 }
+
+P{
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .crawl-text {
+    font-size: 2rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .crawl-text {
+    font-size: 1.5rem; /* Adjust the font size for even smaller screens */
+  }
+}
+
 
 
 
