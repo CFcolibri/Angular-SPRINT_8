@@ -25,8 +25,7 @@ import { ShipInfoComponent } from './ship-info/ship-info.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
-
+    RouterModule,
   ],
   providers: [WebService],
   bootstrap: [AppComponent]
