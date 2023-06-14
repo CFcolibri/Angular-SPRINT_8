@@ -2,8 +2,16 @@
   background-color: rgba(40, 39, 39, 0.5);
   margin-left: 20%;
   margin-right: 20%;
+  border-color: gold;
 }
 
 .card-body{
   color: rgb(145, 143, 143);
+}
+
+#view-button{
+  width: fit-content;
+  background-color: rgb(65, 64, 64);
+  color: rgb(145, 143, 143);;
+  border-color: gold;
 }
