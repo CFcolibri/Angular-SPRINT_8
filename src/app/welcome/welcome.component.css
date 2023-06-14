@@ -1,0 +1,60 @@
+/* CSS Reset to remove default styles */
+html, body, p {
+  margin: 0;
+  padding: 0;
+}
+
+.crawl-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  /* background-color: black; */
+  color: yellow;
+  overflow: hidden;
+  transform-origin: 50% 95%;
+  transform: perspective(300px) rotateX(25deg);
+      -webkit-transform: perspective(300px) rotateX(25deg);
+}
+
+.crawl-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: crawl-animation 80s linear forwards;
+  transform-origin: top;
+}
+
+.crawl-text {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  /* animation: scroll 100s linear 0s infinite; */
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes crawl-animation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
+
+
+
