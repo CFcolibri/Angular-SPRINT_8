@@ -57,58 +57,15 @@
         <div class="attribute-label">MAXIMUM SPEED IN REALSPACE: {{ selectedStarship.MGLT }} MGLT</div>
       </div>
     </div>
-
   </div>
-
   <div class="row mt-6 mb-2">
-    <h2>Pilots</h2>
-
+    <h2>Pilots: </h2>
+    <div class="pilots-container">
+      <div *ngFor="let pilotImage of pilotImages" class="pilot">
+        <img [src]="pilotImage" alt="Pilot" class="pilot-image" />
+      </div>
+      <div *ngIf="pilotImages.length === 0" class="no-pilots">No pilots found for this starship.</div>
+    </div>
   </div>
-
-
-
-
-
-
 
 </div>
-
-
-
-<!--
-
-
-
-    <div class="row mt-4">
-      <div class="col-lg-6 col-md-12">
-        <div class="ship-attributes mt-4">
-          <div class="attribute">
-            <div class="attribute-label">Crew:</div>
-            <div class="attribute-value">{{ selectedStarship.crew }}</div>
-          </div>
-          <div class="attribute">
-            <div class="attribute-label">Passenger Capacity:</div>
-            <div class="attribute-value">{{ selectedStarship.passengers }}</div>
-          </div>
-          <div class="attribute">
-            <div class="attribute-label">Cargo Capacity:</div>
-            <div class="attribute-value">{{ selectedStarship.cargo_capacity }}</div>
-          </div>
-          <div class="attribute">
-            <div class="attribute-label">Consumables:</div>
-            <div class="attribute-value">{{ selectedStarship.consumables }}</div>
-          </div>
-        </div>
-      </div>
-
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  <div class="pilots-section mt-4">
-    <h3 class="text-center">Pilots</h3>
-
-  </div>
-</div>  -->

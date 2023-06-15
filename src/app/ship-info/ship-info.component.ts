@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WebService } from '../services/web.service';
@@ -12,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class ShipInfoComponent implements OnInit {
   selectedStarship!: Starship;
   starshipImage!: string;
+  pilotImages: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +34,7 @@ export class ShipInfoComponent implements OnInit {
       this.getStarshipImageURL(parseInt(id)).then(imageUrl => {
         this.starshipImage = imageUrl;
       });
+      this.retrievePilotImages(starship.pilots);
     });
   }
 
@@ -43,6 +46,16 @@ export class ShipInfoComponent implements OnInit {
     } catch (error) {
       console.error('Error retrieving starship image:', error);
       return '';
+    }
+  }
+
+  retrievePilotImages(pilotUrls: string[] | undefined) {
+    if (pilotUrls && pilotUrls.length > 0) {
+      pilotUrls.forEach((pilotUrl, index) => {
+        const pilotId = pilotUrl.split('/').slice(-2, -1)[0];
+        const pilotImageUrl = this.webService.getPilotImage(parseInt(pilotId));
+        this.pilotImages[index] = pilotImageUrl;
+      });
     }
   }
 }

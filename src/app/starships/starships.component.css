@@ -15,3 +15,11 @@
   color: rgb(145, 143, 143);;
   border-color: gold;
 }
+.loading-indicator{
+  color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+}
