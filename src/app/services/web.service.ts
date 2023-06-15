@@ -10,6 +10,7 @@ export class WebService {
   private apiUrl = 'https://swapi.dev/api/starships';
   private imageBaseUrl = 'https://starwars-visualguide.com/assets/img/starships';
   private imagePilotUrl = 'https://starwars-visualguide.com/assets/img/characters';
+  private imageFilmUrl = 'https://starwars-visualguide.com/assets/img/films';
 
   constructor(private http: HttpClient) { }
 
@@ -29,6 +30,10 @@ export class WebService {
 
   getPilotImage(index: number): string {
     return `${this.imagePilotUrl}/${index + 1}.jpg`;
+  }
+
+  getFilmImage(index: number): string {
+    return `${this.imageFilmUrl}/${index + 1}.jpg`;
   }
 
   getStarshipById(id: string): Observable<Starship> {

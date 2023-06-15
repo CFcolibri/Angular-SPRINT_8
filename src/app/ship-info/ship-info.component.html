@@ -68,4 +68,14 @@
     </div>
   </div>
 
+  <div class="row mt-6 mb-2">
+    <h2>Films: </h2>
+    <div class="films-container">
+      <div *ngFor="let filmImage of filmImages" class="film">
+        <img [src]="filmImage" alt="Film" class="film-image" />
+      </div>
+      <div *ngIf="filmImages.length === 0" class="no-films">No films found for this starship.</div>
+    </div>
+  </div>
+
 </div>
