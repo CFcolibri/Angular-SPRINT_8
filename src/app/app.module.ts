@@ -4,7 +4,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { ErrorInterceptor, JwtInterceptor, fakeBackendProvider } from './_helpers';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,9 +14,12 @@ import { StarshipsComponent } from './starships/starships.component';
 import { WebService } from './services/web.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ShipInfoComponent } from './ship-info/ship-info.component';
-import { LoginComponent } from './account/login/login.component';
-import { RegisterComponent } from './account/register/register.component';
 
+import { LoginComponent } from './account/login.component';
+import { RegisterComponent } from './account/register.component';
+import { fakeBackendProvider } from './_helpers/fake-backend';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
 
 
@@ -38,10 +41,11 @@ import { RegisterComponent } from './account/register/register.component';
     RouterModule,
   ],
   providers: [
-  { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-  { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-  WebService,
-  fakeBackendProvider],
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    WebService,
+    fakeBackendProvider],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

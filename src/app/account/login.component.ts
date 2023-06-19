@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
-
-import { AccountService } from '@app/services'
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { ActivatedRoute, Router } from "@angular/router";
+import { AccountService } from "@app/services";
+import { first } from "rxjs/operators";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   form!: FormGroup;
   loading = false;
   submitted = false;
   error?: string;
-  showPasswordForm: boolean = false;
 
   constructor(
       private formBuilder: FormBuilder,
