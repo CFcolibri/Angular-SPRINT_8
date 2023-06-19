@@ -31,7 +31,7 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     WelcomeComponent,
     ShipInfoComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
