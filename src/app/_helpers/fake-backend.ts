@@ -18,6 +18,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             switch (true) {
                 case url.endsWith('/users/authenticate') && method === 'POST':
                     return authenticate();
+                case url.endsWith('/users/register') && method === 'POST':
+                    return register();
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
