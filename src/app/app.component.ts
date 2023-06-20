@@ -10,15 +10,5 @@ import { User } from './_models';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'SPRINT8-StartWars';
-  // user?: User | null;
-
-  //   constructor(private accountService: AccountService) {
-  //       this.accountService.user.subscribe(x => this.user = x);
-  //   }
-
-  //   logout() {
-  //       this.accountService.logout();
-  //   }
-
+  title = 'SPRINT8-StartWars';
 }

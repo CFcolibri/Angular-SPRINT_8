@@ -62,6 +62,27 @@ P{
 }
 
 
+/* Additional Styles for Audio Element */
+audio {
+  display: none; /* Hide the audio element by default */
+}
+
+/* Optional: Style the audio controls */
+audio::-webkit-media-controls {
+  display: none;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: transparent;
+}
+
+audio::-webkit-media-controls-play-button {
+  display: none;
+}
+
+audio::-webkit-media-controls-start-playback-button {
+  display: none;
+}
 
 
 
