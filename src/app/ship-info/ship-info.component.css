@@ -29,17 +29,18 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
+
 }
 
 .films {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 10px;
 }
 
 .film-image {
   width: 100px;
   height: auto;
   object-fit: cover;
+
 }

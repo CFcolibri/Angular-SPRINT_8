@@ -20,6 +20,7 @@ import { RegisterComponent } from './account/register.component';
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { AuthGuard } from './_helpers';
 
 
 
@@ -44,7 +45,9 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     WebService,
-    fakeBackendProvider],
+    fakeBackendProvider,
+    AuthGuard
+    ],
 
   bootstrap: [AppComponent]
 })
