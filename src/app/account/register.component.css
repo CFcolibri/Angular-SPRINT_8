@@ -1,0 +1,106 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 5%;
+}
+
+.register-content {
+
+  margin-bottom: 5%;
+  width: 450px;
+  padding: 40px;
+  background-color: #1d1c1c;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+}
+
+.register-title {
+  margin-top: 10%;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: gold;
+  font-family: "News Gothic", Arial, sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control::placeholder {
+  color: gold;
+}
+
+.form-control {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid gold;
+  border-radius: 8px;
+  color: gold;
+  background-color: #333;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn-primary {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s;
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background-color: #007bff;
+}
+
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo1 {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.logo2 {
+  width: 100px;
+  margin-right: 15px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #000;
+  padding: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-close svg {
+  vertical-align: middle;
+}
+
+.btn-close:focus,
+.btn-close:hover {
+  color:white;
+}
+
+

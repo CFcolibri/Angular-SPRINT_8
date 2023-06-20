@@ -34,7 +34,7 @@
 
 .form-control::placeholder {
   color: gold;
-  background-color: #333;
+
 }
 
 .form-control {
@@ -44,12 +44,15 @@
   border: 1px solid gold;
   border-radius: 4px;
   color: gold;
+  background-color: #333;
+
 }
 
 .error-message {
   color: red;
   font-size: 14px;
   margin-top: 5px;
+
 }
 
 .btn-login {
@@ -81,7 +84,6 @@
 .logo-container {
   display: flex;
   justify-content: space-between;
-  /* margin-bottom: 15px; */
 }
 
 .logo1 {
