@@ -11,7 +11,7 @@ import { AuthGuard } from './_helpers/auth.guard';
 const routes: Routes = [
   { path: '', component: WelcomeComponent},
   { path: 'starships', component: StarshipsComponent,  canActivate: [AuthGuard]},
-  { path: 'ship-info/:id', component: ShipInfoComponent },
+  { path: 'ship-info/:id', component: ShipInfoComponent, canActivate: [AuthGuard] },
   { path: 'account/login', component: LoginComponent },
   { path: 'account/register', component: RegisterComponent },
 
